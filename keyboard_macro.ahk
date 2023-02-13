@@ -1,34 +1,76 @@
 ; Author: Jonah Bui
 
-
+; --------------------------------------------------------------------------
 ; Navigate across lines and in a line with i, j, k, l
-!l::SendInput {RIGHT}
+; --------------------------------------------------------------------------
+; Alt+l
+<!l::SendInput {RIGHT}
 return
 
-+<!l::SendInput +{RIGHT}
+; Alt+Shift+l
+<!<+l::
+SendInput +{RIGHT}
 return
 
-<!k::SendInput {DOWN}
+; Alt+k
+<!k::
+SendInput {DOWN}
 return
 
-+<!k::SendInput +{DOWN}
+; Alt+Shift+k
+<!<+k::
+SendInput +{DOWN}
 return
 
-<!j::SendInput {LEFT}
+; Alt:j
+<!j::
+SendInput {LEFT}
 return
 
-+<!j::SendInput +{LEFT}
+; Alt+Shift+j
+<!<+j::
+SendInput +{LEFT}
 return
 
-<!i::SendInput {UP}
+; Alt+i
+<!i::
+SendInput {UP}
 return
 
-+<!i::SendInput +{UP}
+; Alt+Shift+i
+<!<+i::
+SendInput +{UP}
 return
 
+; --------------------------------------------------------------------------
 ; Allow quick access to beginning and end of line.
-<!o::SendInput {END}
+; --------------------------------------------------------------------------
+; Alt+o
+<!o::
+SendInput {END}
 return
 
-<!u::SendInput {HOME}
+; Alt+Shift+o
+<!<+o::
+SendInput +{END}
 return
+
+; Alt+u
+<!u::
+SendInput {HOME}
+return
+
+; Alt+Shift+u
++<!u::
+SendInput +{HOME}
+return
+
+/*
+Subset of Hotkey Modifier Symbols:
+# - Win
+! - Alt
+^ - Ctrl
++ Shift
+< - Use the left key of the pair
+> - Use the right key pair
+*/
