@@ -11,6 +11,11 @@ A_MenuMaskKey := "vkE8"
 	SendInput "{RIGHT}"
 }
 
+; Alt+Ctrl+l
+<!<^l::{
+	SendInput "^{RIGHT}"
+}
+
 ; Alt+Shift+l
 <!<+l::{
 	SendInput "+{RIGHT}"
@@ -30,6 +35,11 @@ A_MenuMaskKey := "vkE8"
 ; Alt:j
 <!j::{
 	SendInput "{LEFT}"
+}
+
+; Alt+Ctrl+j
+<!<^j::{
+	SendInput "^{LEFT}"
 }
 
 ; Alt+Shift+j
